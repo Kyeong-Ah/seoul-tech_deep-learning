@@ -31,19 +31,22 @@ CustomMLP 모델의 구조는 다음과 같습니다:
 앞서 계산한 LeNet-5 모델의 총 파라미터 수가 61,706개였던 것을 고려하면, CustomMLP 모델의 파라미터 개수가 LeNet-5와 비슷한 수준임을 확인할 수 있습니다.   
 
 ## 2. Plots for each model.
+![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4a9782cd-0216-42a0-b9f1-6b4c6574ab22)
 
 ## 3. Compare the predictive performances of LeNet-5 and custom MLP.
-LeNet-5 ACC(%) = 
+LeNet-5 ACC = 99.16%
    
-CustomMLP ACC(%) = 
+CustomMLP ACC = 97.95%
    
 
 ## 4. Regularization techniques to improve LeNet-5   
 * Dropout
 * L2 regularization(Weight decay)
 
-LeNet-5 = 
+LeNet-5 = 99.16%
    
-Regularization 후 LeNet-5 = 
+Regularization 후 LeNet-5 = 99.98%
    
-정규화 후 성능이 향상할 것이라고 기대했던 결과에 반해, 성능이 소폭 감소하는 것을 확인할 수 있습니다.
+정규화 후 성능이 향상할 것이라고 기대했던 대로 성능이 소폭 상승하는 것을 확인할 수 있습니다.   
+이는 Dropout과 L2 Regularization의 결과로 상승한 것임을 확인할 수 있습니다.
+
