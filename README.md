@@ -34,6 +34,7 @@ CustomMLP 모델의 구조는 다음과 같습니다:
 
 ## 3. Compare the predictive performances of LeNet-5 and custom MLP.
 LeNet-5 ACC(%) = 
+   
 CustomMLP ACC(%) = 
    
 
