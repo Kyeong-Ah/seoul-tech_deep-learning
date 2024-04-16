@@ -34,12 +34,14 @@ CustomMLP 모델의 구조는 다음과 같습니다:
 ![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4a9782cd-0216-42a0-b9f1-6b4c6574ab22)
 
 ## 3. Compare the predictive performances of LeNet-5 and custom MLP.
+#### 최고 성능 기준으로 작성하였습니다.   
 LeNet-5 ACC = 99.16%
    
 CustomMLP ACC = 97.95%
    
 
 ## 4. Regularization techniques to improve LeNet-5   
+#### 최고 성능 기준으로 작성하였습니다.   
 * Dropout
 * L2 regularization(Weight decay)
 
