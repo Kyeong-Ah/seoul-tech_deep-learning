@@ -126,26 +126,27 @@ def main():
         # LeNet-5
         trn_loss, trn_acc = train(model_lenet5, train_loader, device, criterion, optimizer_lenet5)
         tst_loss, tst_acc = test(model_lenet5, test_loader, device, criterion)
-        train_LeNet5.append(trn_loss, trn_acc)
-        test_LeNet5.append(tst_loss, tst_acc)
+        train_LeNet5.append((trn_loss, trn_acc))
+        test_LeNet5.append((tst_loss, tst_acc))
         print(f"LeNet-5 Epoch: {epoch+1}, Train Loss: {trn_loss:.4f}, Train Acc: {trn_acc:.2f}%, Test Loss: {tst_loss:.4f}, Test Acc: {tst_acc:.2f}%", flush=True)
 
         # LeNet-5 Dropout
         trn_loss, trn_acc = train(model_lenet5_dropout, train_loader, device, criterion, optimizer_lenet5_dropout)
         tst_loss, tst_acc = test(model_lenet5_dropout, test_loader, device, criterion)
-        train_LeNet5_dropout.append(trn_loss, trn_acc)
-        test_LeNet5_dropout.append(tst_loss, tst_acc)
+        train_LeNet5_dropout.append((trn_loss, trn_acc))
+        test_LeNet5_dropout.append((tst_loss, tst_acc))
         print(f"LeNet-5_Dropout Epoch: {epoch+1}, Train Loss: {trn_loss:.4f}, Train Acc: {trn_acc:.2f}%, Test Loss: {tst_loss:.4f}, Test Acc: {tst_acc:.2f}%", flush=True)
         
         # Custom MLP
         trn_loss, trn_acc = train(model_mlp, train_loader, device, criterion, optimizer_mlp)
         tst_loss, tst_acc = test(model_mlp, test_loader, device, criterion)
-        train_MLP.append(trn_loss, trn_acc)
-        test_MLP.append(tst_loss, tst_acc)
+        train_MLP.append((trn_loss, trn_acc))
+        test_MLP.append((tst_loss, tst_acc))
         print(f"Custom MLP Epoch: {epoch+1}, Train Loss: {trn_loss:.4f}, Train Acc: {trn_acc:.2f}%, Test Loss: {tst_loss:.4f}, Test Acc: {tst_acc:.2f}%", flush=True)
     
     # plotting
     fig, axs = plt.subplots(3, 2, figsize=(12, 15))
+    num_epochs = 31
 
     # LeNet5 plotting
     axs[0, 0].plot(train_LeNet5[0], label='Train Loss')
@@ -153,6 +154,7 @@ def main():
     axs[0, 0].set_xlabel('Epoch')
     axs[0, 0].set_ylabel('Loss')
     axs[0, 0].set_title('LeNet5 - Loss Curve')
+    axs[0,0].set_xticks(range(1,num_epochs))
     axs[0, 0].legend()
 
     axs[0, 1].plot(train_LeNet5[1], label='Train Accuracy')
@@ -160,6 +162,7 @@ def main():
     axs[0, 1].set_xlabel('Epoch')
     axs[0, 1].set_ylabel('Accuracy')
     axs[0, 1].set_title('LeNet5 - Accuracy Curve')
+    axs[0,1].set_xticks(range(1,num_epochs))
     axs[0, 1].legend()
 
     # LeNet5WithDropout plotting
@@ -168,6 +171,7 @@ def main():
     axs[1, 0].set_xlabel('Epoch')
     axs[1, 0].set_ylabel('Loss')
     axs[1, 0].set_title('LeNet5WithDropout - Loss Curve')
+    axs[1,0].set_xticks(range(1,num_epochs))
     axs[1, 0].legend()
 
     axs[1, 1].plot(train_LeNet5_dropout[1], label='Train Accuracy')
@@ -175,6 +179,7 @@ def main():
     axs[1, 1].set_xlabel('Epoch')
     axs[1, 1].set_ylabel('Accuracy')
     axs[1, 1].set_title('LeNet5WithDropout - Accuracy Curve')
+    axs[1,1].set_xticks(range(1,num_epochs))
     axs[1, 1].legend()
 
     # CustomMLP plotting
@@ -183,6 +188,7 @@ def main():
     axs[2, 0].set_xlabel('Epoch')
     axs[2, 0].set_ylabel('Loss')
     axs[2, 0].set_title('CustomMLP - Loss Curve')
+    axs[2,0].set_xticks(range(1,num_epochs))
     axs[2, 0].legend()
 
     axs[2, 1].plot(train_MLP[1], label='Train Accuracy')
@@ -190,6 +196,7 @@ def main():
     axs[2, 1].set_xlabel('Epoch')
     axs[2, 1].set_ylabel('Accuracy')
     axs[2, 1].set_title('CustomMLP - Accuracy Curve')
+    axs[2,1].set_xticks(range(1,num_epochs))
     axs[2, 1].legend()
 
     plt.tight_layout()
