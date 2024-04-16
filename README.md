@@ -33,6 +33,15 @@ CustomMLP 모델의 구조는 다음과 같습니다:
 ## 2. Plots for each model.
 
 ## 3. Compare the predictive performances of LeNet-5 and custom MLP.
+LeNet-5 ACC(%) = 
+CustomMLP ACC(%) = 
+   
 
 ## 4. Regularization techniques to improve LeNet-5   
+* Dropout
+* L2 regularization(Weight decay)
 
+LeNet-5 = 
+Regularization 후 LeNet-5 = 
+   
+정규화 후 성능이 향상할 것이라고 기대했던 결과에 반해, 성능이 소폭 감소하는 것을 확인할 수 있습니다.
