@@ -20,12 +20,10 @@ RNN과 LSTM은 둘 다 동일한 hyper parameter로 학습하였습니다.
 
 ### Performance
 #### RNN loss plot
-![RNN_loss_plot](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/ec9759f3-5676-4c5f-870e-da967c8dceb0)
 ![RNN_loss_plot](./RNN_loss_plot.png)
 
 
 #### LSTM loss plot
-![LSTM_loss_plot](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/7e149ed5-baaa-47f0-990f-e0dffcd80606)
 ![LSTM_loss_plot](./LSTM_loss_plot.png)
 
 
@@ -72,4 +70,17 @@ $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
 Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
   
 - temperatures = [0.2, 0.5, 1.0, 2.0, 5.0, 10.0]
+
+![seed A_t=0.2](./samples/T_seed_large_a_t_0,2.png)
+
+![seed A_t=0.5](./samples/T_seed_large_a_t_0,5.png)
+
+![seed A_t=1.0](./samples/T_seed_large_a_t_1,0.png)
+
+![seed A_t=2.0](./samples/T_seed_large_a_t_2,0.png)
+
+![seed A_t=5.0](./samples/T_seed_large_a_t_5,0.png)
+
+![seed A_t=10.0](./samples/T_seed_large_a_t_10,0.png)
+
 
