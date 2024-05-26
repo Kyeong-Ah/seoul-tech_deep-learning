@@ -47,6 +47,7 @@ RNN보다 LSTM의 성능이 더 좋은 것을 확인할 수 있습니다.
 ### 5. Write generate.py to generate characters with your trained model. Choose the model showing the best validation performance. You should provide at least 100 length of 5 different samples generated from different seed characters.
 - seed_chars_list = ['A', 'a', 'B', 'b', 'C']
 - temperatues = 0.5
+
 위와 같이 설정하고 sample을 생성하였습니다.  
 A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와 소문자 여부에 의해 샘플이 다르게 생성될 것 같아서 이와 같이 설정하였습니다.  
 아래는 생성 결과입니다.  
