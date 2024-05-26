@@ -51,12 +51,12 @@ RNN보다 LSTM의 성능이 더 좋은 것을 확인할 수 있습니다.
 위와 같이 설정하고 sample을 생성하였습니다.  
 A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와 소문자 여부에 의해 샘플이 다르게 생성될 것 같아서 이와 같이 설정하였습니다.  
 아래는 생성 결과입니다.  
-![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/fee3a072-fa90-470d-9546-e7d8e3e4479d)
+![seed A_t=0.5](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/fee3a072-fa90-470d-9546-e7d8e3e4479d)
 
-![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4af55935-1b96-4ba2-a5fa-eaf5222103bb)
+![seed a_t=0.5](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4af55935-1b96-4ba2-a5fa-eaf5222103bb)
 
-
-
+![seed B_t=0.5](./hw3/samples/S_seed large b_t 0,.jpg)
+  
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
 $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
 Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
