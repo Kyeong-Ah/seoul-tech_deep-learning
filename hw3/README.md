@@ -14,8 +14,8 @@ RNN과 LSTM은 둘 다 동일한 hyper parameter로 학습하였습니다.
 모델 학습 중에 성능이 개선되지 않으면 학습이 중단되도록 early_stopping을 설정하였습니다.
 #### 과적합
 처음에는 hidden_size=512, learning_rate=0.002였으나 과적합이 발생하여 이를 해결하기 위해 아래와 같이 값을 조정하였습니다. 그 결과 validation loss가 감소하였고, 변경한 상태로 최종 학습을 진행하였습니다.
-    - hidden_size = 256
-    - learning_rate = 0.001
+- hidden_size = 256
+- learning_rate = 0.001
 
 ### Performance
 RNN loss plot
