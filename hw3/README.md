@@ -12,8 +12,6 @@ LSTM plot
 ### 5. Write generate.py to generate characters with your trained model. Choose the model showing the best validation performance. You should provide at least 100 length of 5 different samples generated from different seed characters.
 seed character별 sample
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
-    $$
-    y_i = \frac{\exp(z_i / T)}{\sum{\exp(z_i / T)}}  
-    $$
-    Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
+$$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
+Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
     
