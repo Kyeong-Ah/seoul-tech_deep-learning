@@ -50,8 +50,8 @@ RNN보다 LSTM의 성능이 더 좋은 것을 확인할 수 있습니다.
 - seed_chars_list = ['A', 'a', 'B', 'b', 'C']
 - temperatues = 0.5
 
-위와 같이 설정하고 sample을 생성하였습니다.  
-A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와 소문자 여부에 의해 샘플이 다르게 생성될 것 같아서 이와 같이 설정하였습니다.  
+위와 같이 설정하고 best model인 LSTM을 사용하여 sample을 생성하였습니다.  
+seed character를 [A, a, B, b, C] 이렇게 a와 b에 대해 각각 대문자와 소문자를 모두 넣은 것은 대문자와 소문자 여부에 의해 샘플이 다르게 생성될 것 같아서 이와 같이 설정하였습니다.  
 아래는 생성 결과입니다.  
 
 ![seed A_t=0.5](./samples/S_seed_large_a_t_0,5.png)
@@ -64,6 +64,10 @@ A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와
 
 ![seed C_t=0.5](./samples/S_seed_large_c_t_0,5.png)
 
+생성 결과를 살펴보면 같은 문자여도 대문자/소문자 여부에 따라 생성되는 텍스트의 유형이 다른 것을 확인할 수 있습니다.  
+대문자의 경우 등장인물의 이름이, 소문자의 경우 일반적인 서술 지문이 생성됩니다.  
+이는 원본 데이터셋인 Shakespeare 데이터셋이 셰익스피어의 희곡이므로 원본의 형식에 따라 텍스트가 생성되는 것으로 판단됩니다.  
+  
 
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
 $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
