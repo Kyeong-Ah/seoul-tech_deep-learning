@@ -21,9 +21,13 @@ RNN과 LSTM은 둘 다 동일한 hyper parameter로 학습하였습니다.
 ### Performance
 #### RNN loss plot
 ![RNN_loss_plot](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/ec9759f3-5676-4c5f-870e-da967c8dceb0)
+![RNN_loss_plot](./RNN_loss_plot.png)
+
 
 #### LSTM loss plot
 ![LSTM_loss_plot](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/7e149ed5-baaa-47f0-990f-e0dffcd80606)
+![LSTM_loss_plot](./LSTM_loss_plot.png)
+
 
 RNN: early_stopping이 적용되어 28번째 epoch 에서 학습을 중단했습니다.  
 LSTM: early_stopping이 적용되어 30번째 epoch 에서 학습을 중단했습니다.  
