@@ -45,8 +45,20 @@ RNN보다 LSTM의 성능이 더 좋은 것을 확인할 수 있습니다.
 
 ## Generate samples
 ### 5. Write generate.py to generate characters with your trained model. Choose the model showing the best validation performance. You should provide at least 100 length of 5 different samples generated from different seed characters.
-seed character별 sample
+- seed_chars_list = ['A', 'a', 'B', 'b', 'C']
+- temperatues = 0.5
+위와 같이 설정하고 sample을 생성하였습니다.  
+A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와 소문자 여부에 의해 샘플이 다르게 생성될 것 같아서 이와 같이 설정하였습니다.  
+아래는 생성 결과입니다.  
+![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/fee3a072-fa90-470d-9546-e7d8e3e4479d)
+
+![image](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4af55935-1b96-4ba2-a5fa-eaf5222103bb)
+
+
+
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
 $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
 Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
-    
+  
+- temperatures = [0.2, 0.5, 1.0, 2.0, 5.0, 10.0]
+
