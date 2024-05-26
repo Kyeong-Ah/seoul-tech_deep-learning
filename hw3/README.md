@@ -69,6 +69,7 @@ seed character를 [A, a, B, b, C] 이렇게 a와 b에 대해 각각 대문자와
 이는 원본 데이터셋인 Shakespeare 데이터셋이 셰익스피어의 희곡이므로 원본의 형식에 따라 텍스트가 생성되는 것으로 판단됩니다.  
   
 
+
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
 $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
 Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
@@ -87,4 +88,19 @@ Try different temperatures when you generate characters, and discuss what differ
 
 ![seed A_t=10.0](./samples/T_seed_large_a_t_10,0.png)
 
+Temperature에 따라 생성되는 데이터셋의 변화를 보기 위해 seed chracter는 A로 정하였습니다.  
+Temperature 값이 낮을 때는 높은 값으로 생성된 텍스트에 비해 상대적으로 문장 구조나 문법, 해석이 자연스러운 텍스트가 생성됩니다.  
+그 반대로 temperature 값이 높을 때는 낮은 값으로 생성된 텍스트에 비해 상대적으로 자연스럽지 않은 텍스트가 생성됩니다.  
+1.0 까지는 어느 정도 해석이 가능하고, 단어도 실존하는 단어가 등장하지만 2.0 이상부터는 무작위로 작성된 듯한 단어들이 나타납니다.  
+10.0으로 생성한 경우 해석이 불가능한 문장이 생성된 것을 확인할 수 있습니다.  
+Temperature의 변화에 의한 생성 결과를 확인해본 결과, 그럴듯한 문장을 만들기 위해서는 0.5 이상 1.0 미만인 값을 선택하는 것이 좋다고 판단됩니다.  
+
+
+
+## Discussion
+이번 과제를 진행하면서 이론상 LSTM이 RNN보다 일반적으로 성능이 더 좋다는 사실을 직접 확인할 수 있었습니다.  
+단순히 모델을 구현하는 것에 더불어 temperature 를 조절하면서 데이터 생성 결과가 달라지는 것도 확인할 수 있었습니다.  
+다만, 직접 구현한 모델은 레이어 수가 오늘날 쓰이는 인공신경망 모델들에 비해 레이어 수가 적고, 생성되는 텍스트의 품질도 아주 뛰어난 것은 아닙니다. 차후에는 레이어 수를 늘려도 과적합이 되지 않는 모델을 설계할 필요가 있다고 판단됩니다.
+
+감사합니다.
 
