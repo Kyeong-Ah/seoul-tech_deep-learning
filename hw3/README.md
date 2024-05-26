@@ -55,8 +55,12 @@ A, a, B, b를 각각 대문자와 소문자를 모두 넣은 것은 대문자와
 
 ![seed a_t=0.5](https://github.com/Kyeong-Ah/seoul-tech_deep-learning/assets/97220162/4af55935-1b96-4ba2-a5fa-eaf5222103bb)
 
-![seed B_t=0.5](./hw3/samples/S_seed large b_t 0,5.jpg)
-  
+![seed B_t=0.5](./hw3/samples/S_seed_large_b_t_0,5.jpg)
+
+![seed b_t=0.5](./hw3/samples/S_seed_small_b_t_0,5.jpg)
+
+![seed C_t=0.5](./hw3/samples/S_seed_large_c_t_0,5.jpg)
+
 ### 6. (Report) Softmax function with a temperature parameter *T* can be written as: 
 $$y_i = \frac{\exp(z_i/T)}{\displaystyle\sum \exp(z_i/T)}$$
 Try different temperatures when you generate characters, and discuss what difference the temperature makes and why it helps to generate more plausible results.
