@@ -4,7 +4,8 @@ Shakespeare 데이터셋을 활용한 문자 기반의 Neural Network modeling
 ### RNN
 설명
 ### LSTM
-설명
+LSTM에서 과적합이 발생.
+learing_rate를 늘려서 해결 시도. : 0.02 -> 0.1
 ### Performance
 RNN plot
 LSTM plot
